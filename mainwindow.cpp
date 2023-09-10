@@ -44,3 +44,14 @@ void MainWindow::on_pushButton_clicked()
     // DiscoveryAgent'ın stop() işlevini çağırarak cihaz taramasını durdurun.
     discoveryAgent->stop();
 }
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    // Seçili öğeyi alın.
+
+    auto currentItem =  ui->listWidget->currentItem();
+    // Seçili öğenin metnini alın.
+    QString text = currentItem->text();
+    ui->pushButton_2->setText("Connect to "+ text);
+}
+
